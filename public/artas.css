@@ -1,0 +1,69 @@
+body {
+    cursor: default;
+}
+
+.header {
+    padding: 20px;
+    background-color: #4a82da;
+    text-align: center;
+}
+
+.panel {
+    padding: 40px 20px 50px;
+    text-align: center;
+}
+
+.panel-title {
+    font-weight: bold;
+    font-size: 28px;
+    padding-bottom: 20px;
+}
+
+.panel-why {
+    background-color: #e4e4e4;
+}
+
+.panel-todo {
+    background-color: #626761;
+    color: #F3F5F1;
+}
+
+.panel-strawpool {
+    background-color: #e4e4e4;
+}
+
+.artas-born {
+    font-size: 20px;
+}
+
+span.question {
+    font-weight: bold;
+    color: #2c478a
+}
+
+div.strawpool-question {
+    padding-top: 10px;
+}
+
+input[type=number] {
+    width: 40px;
+    text-align: center;
+}
+
+input {
+    cursor: pointer;
+}
+
+label {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.todo-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.block {
+
+}
