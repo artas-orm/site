@@ -1,0 +1,101 @@
+Artas\Site\Entity\Strawpool:
+    getters:
+        interested:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you are interested in Artas project, or not.
+        phpVersion:
+            - NotNull:
+                groups: [add]
+                message: Please tell us what minimal PHP version you want.
+            - Range:
+                groups: [add]
+                min: 1
+                max: 3
+                minMessage: Please tell us what minimal PHP version you want.
+                maxMessage: Please tell us what minimal PHP version you want.
+                invalidMessage: Please tell us what minimal PHP version you want.
+        dbal:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you need a DBAL, or not.
+        sqlByOwn:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you want to write your own SQL, or not.
+        importancePerformance:
+            - NotNull:
+                groups: [add]
+                message: Please tell us your importance level for performances.
+            - Range:
+                groups: [add]
+                min: 1
+                max: 5
+                minMessage: Please tell us your importance level for performances between 1 and 5.
+                maxMessage: Please tell us your importance level for performances between 1 and 5.
+                invalidMessage: Please tell us your importance level for performances between 1 and 5.
+        importanceReleasesFrequency:
+            - NotNull:
+                groups: [add]
+                message: Please tell us your importance level for releases frequency.
+            - Range:
+                groups: [add]
+                min: 1
+                max: 5
+                minMessage: Please tell us your importance level for releases frequency between 1 and 5.
+                maxMessage: Please tell us your importance level for releases frequency between 1 and 5.
+                invalidMessage: Please tell us your importance level for releases frequency between 1 and 5.
+        importanceCodeExtensibility:
+            - NotNull:
+                groups: [add]
+                message: Please tell us your importance level for extensibility.
+            - Range:
+                groups: [add]
+                min: 1
+                max: 5
+                minMessage: Please tell us your importance level for extensibility between 1 and 5.
+                maxMessage: Please tell us your importance level for extensibility between 1 and 5.
+                invalidMessage: Please tell us your importance level for extensibility between 1 and 5.
+        importanceCommunity:
+            - NotNull:
+                groups: [add]
+                message: Please tell us your importance level for community.
+            - Range:
+                groups: [add]
+                min: 1
+                max: 5
+                minMessage: Please tell us your importance level for community between 1 and 5.
+                maxMessage: Please tell us your importance level for community between 1 and 5.
+                invalidMessage: Please tell us your importance level for community between 1 and 5.
+        crowdFunding:
+            - NotNull:
+                groups: [add]
+                message: Please tell us your interest on crowdfunding.
+        frameworkSymfony2:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you need Symfony2 integration.
+        frameworkSymfony3:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you need Symfony3 integration.
+        frameworkZend2:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you need Zend 2 integration.
+        frameworkZend3:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you need Zend 3 integration.
+        frameworkLaravel54:
+            - NotNull:
+                groups: [add]
+                message: Please tell us if you need Laravel 5.4 integration.
+        frameworkNette24:
+            - NotNull:
+                groups: [add]
+                message: Please tell us is you need Nette 2.4 integration.
+        frameworkOther:
+            - NotNull:
+                groups: [add]
+                message: Please tell us is you need other framework integration.

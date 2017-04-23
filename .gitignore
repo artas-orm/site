@@ -1,1 +1,5 @@
 .idea/
+vendor/
+config/database.php
+!var/.gitkeep
+var/

@@ -1,0 +1,95 @@
+Artas\Site\Entity\Strawpool:
+    table: strawpool
+    type: entity
+
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+            options: { unsigned: true }
+
+    fields:
+        interested:
+            type: boolean
+
+        phpVersion: ~
+
+        dbal:
+            type: boolean
+
+        sqlByOwn:
+            type: boolean
+
+        dbmsMysql:
+            type: boolean
+
+        dbmsOci:
+            type: boolean
+
+        dbmsSqlServer:
+            type: boolean
+
+        dbmsPostgreSql:
+            type: boolean
+
+        dbmsDb2:
+            type: boolean
+
+        dbmsSqLite:
+            type: boolean
+
+        dbmsOther:
+            type: boolean
+
+        importancePerformance:
+            type: smallint
+            options:
+                unsigned: true
+
+        importanceReleasesFrequency:
+            type: smallint
+            options:
+                unsigned: true
+
+        importanceCodeExtensibility:
+            type: smallint
+            options:
+                unsigned: true
+
+        importanceCommunity:
+            type: smallint
+            options:
+                unsigned: true
+
+        crowdFunding:
+            type: boolean
+
+        frameworkSymfony2:
+            type: boolean
+
+        frameworkSymfony3:
+            type: boolean
+
+        frameworkZend2:
+            type:
+
+        frameworkZend3:
+            type: boolean
+
+        frameworkLaravel54:
+            type: boolean
+
+        frameworkNette24:
+            type: boolean
+
+        frameworkOther:
+            type: boolean
+
+        chooseArtas:
+            type: blob
+
+        preferedFeatures:
+            type: blob
+
+        faults:
+            type: blob

@@ -56,24 +56,24 @@
 
             <div class="col-lg-12 panel panel-strawpool">
                 <div class="panel-title">Take 2 minutes for this strawpool !</div>
-                <form action="strawpool.php" method="POST">
+                <form action="strawpool.php" method="POST" id="strawpool-form">
                     <div class="strawpool-question">
                         <span class="question">Are you interested in an alternative to Doctrine, Propel and Eloquent ?</span>
                         <br>
                         <input type="radio" name="interested" value="1" id="interested-1">
                         <label for="interested-1">Yes</label>
-                        <input type="radio" name="interested" value="2" id="interested-2">
+                        <input type="radio" name="interested" value="0" id="interested-2">
                         <label for="interested-2">No</label>
                     </div>
 
                     <div class="strawpool-question">
                         <span class="question">What minimal version of PHP ?</span>
                         <br>
-                        <input type="radio" name="php-version" value="1" id="php-7-1">
+                        <input type="radio" name="phpVersion" value="1" id="php-7-1">
                         <label for="php-7-1">7.1 (since december 2016)</label>
-                        <input type="radio" name="php-version" value="2" id="php-7-0">
+                        <input type="radio" name="phpVersion" value="2" id="php-7-0">
                         <label for="php-7-0">7.0 (since decembre 2015)</label>
-                        <input type="radio" name="php-version" value="3" id="php-5-6">
+                        <input type="radio" name="phpVersion" value="3" id="php-5-6">
                         <label for="php-5-6">5.6 (since august 2014)</label>
                     </div>
 
@@ -82,7 +82,7 @@
                         <br>
                         <input type="radio" name="dbal" value="1" id="dbal-1">
                         <label for="dbal-1">Yes</label>
-                        <input type="radio" name="dbal" value="2" id="dbal-2">
+                        <input type="radio" name="dbal" value="0" id="dbal-2">
                         <label for="dbal-2">No</label>
                     </div>
 
@@ -92,29 +92,29 @@
                             or use something who write SQL for you (like Doctrine QueryBuilder / DQL) ?
                         </span>
                         <br>
-                        <input type="radio" name="sql-by-own" value="1" id="sql-by-own-1">
-                        <label for="sql-by-own-1">Write my SQL, to optimize it</label>
-                        <input type="radio" name="sql-by-own" value="2" id="sql-by-own-2">
-                        <label for="sql-by-own-2">Write something like Doctrine QueryBuilder / DQL</label>
+                        <input type="radio" name="sqlByOwn" value="1" id="sqlByOwn-1">
+                        <label for="sqlByOwn-1">Write my SQL, to optimize it</label>
+                        <input type="radio" name="sqlByOwn" value="0" id="sqlByOwn-2">
+                        <label for="sqlByOwn-2">Write something like Doctrine QueryBuilder / DQL</label>
                     </div>
 
                     <div class="strawpool-question">
                         <span class="question">What DBMS you want to use with Artas ?</span>
                         <br>
-                        <input type="checkbox" name="dbms-mysql" value="1" id="dbms-mysql">
-                        <label for="dbms-mysql">MySQL</label>
-                        <input type="checkbox" name="dbms-oci" value="1" id="dbms-oci">
-                        <label for="dbms-oci">Oracle</label>
-                        <input type="checkbox" name="dbms-sql-server" value="1" id="dbms-sql-server">
-                        <label for="dbms-sql-server">MS SQL Server</label>
-                        <input type="checkbox" name="dbms-postgre-sql" value="1" id="dbms-postgre-sql">
-                        <label for="dbms-postgre-sql">Postgre SQL</label>
-                        <input type="checkbox" name="dbms-db2" value="1" id="dbms-db2">
-                        <label for="dbms-db2">DB2</label>
-                        <input type="checkbox" name="dbms-sqlite" value="1" id="dbms-sqlite">
-                        <label for="dbms-sqlite">SQLite</label>
-                        <input type="checkbox" name="dbms-other" value="1" id="dbms-other">
-                        <label for="dbms-other">Other</label>
+                        <input type="checkbox" name="dbmsMysql" value="1" id="dbmsMysql">
+                        <label for="dbmsMysql">MySQL</label>
+                        <input type="checkbox" name="dbmsOci" value="1" id="dbmsOci">
+                        <label for="dbmsOci">Oracle</label>
+                        <input type="checkbox" name="dbmsSqlServer" value="1" id="dbmsSqlServer">
+                        <label for="dbmsSqlServer">MS SQL Server</label>
+                        <input type="checkbox" name="dbmsPostgreSql" value="1" id="dbmsPostgreSql">
+                        <label for="dbmsPostgreSql">Postgre SQL</label>
+                        <input type="checkbox" name="dbmsDb2" value="1" id="dbmsDb2">
+                        <label for="dbmsDb2">DB2</label>
+                        <input type="checkbox" name="dbmsSqlite" value="1" id="dbmsSqlite">
+                        <label for="dbmsSqlite">SQLite</label>
+                        <input type="checkbox" name="dbmsOther" value="1" id="dbmsOther">
+                        <label for="dbmsOther">Other</label>
                     </div>
 
                     <div class="strawpool-question">
@@ -123,17 +123,17 @@
                             (1 : very important, 5 : useless) :
                         </span>
                         <br>
-                        <input type="number" name="importance-performance" id="importance-performance">
-                        <label for="importance-performance">Performance</label>
+                        <input type="number" name="importancePerformance" id="importancePerformance">
+                        <label for="importancePerformance">Performance</label>
                         <br>
-                        <input type="number" name="importance-roadmap" id="importance-roadmap">
-                        <label for="importance-roadmap">Releases frequency</label>
+                        <input type="number" name="importanceReleasesFrequency" id="importanceReleasesFrequency">
+                        <label for="importanceReleasesFrequency">Releases frequency</label>
                         <br>
-                        <input type="number" name="importance-performance" id="importance-extensibility">
-                        <label for="importance-extensibility">Code extensibility</label>
+                        <input type="number" name="importanceExtensibility" id="importanceExtensibility">
+                        <label for="importanceExtensibility">Code extensibility</label>
                         <br>
-                        <input type="number" name="importance-community" id="importance-community">
-                        <label for="importance-community">Community</label>
+                        <input type="number" name="importanceCommunity" id="importanceCommunity">
+                        <label for="importanceCommunity">Community</label>
                         <br>
                     </div>
 
@@ -142,7 +142,7 @@
                         <br>
                         <input type="radio" name="crowdfunding" value="1" id="crowdfunding-1">
                         <label for="crowdfunding-1">Yes</label>
-                        <input type="radio" name="crowdfunding" value="2" id="crowdfunding-2">
+                        <input type="radio" name="crowdfunding" value="0" id="crowdfunding-2">
                         <label for="crowdfunding-2">No</label>
                     </div>
 
@@ -151,39 +151,39 @@
                         <br>
 
                         <label>
-                            <input type="checkbox" name="framework-symfony-2" value="1">
+                            <input type="checkbox" name="frameworkSymfony2" value="1">
                             Symfony2
                         </label>
                         <label>
-                            <input type="checkbox" name="framework-symfony-3" value="1">
+                            <input type="checkbox" name="frameworkSymfony3" value="1">
                             Symfony3
                         </label>
                         <label>
-                            <input type="checkbox" name="framework-zend-2" value="1">
+                            <input type="checkbox" name="frameworkZend2" value="1">
                             Zend Framework 2
                         </label>
                         <label>
-                            <input type="checkbox" name="framework-zend-3" value="1">
+                            <input type="checkbox" name="frameworkZend3" value="1">
                             Zend Framework 3
                         </label>
-                        <input type="checkbox" name="framework-laravel-5-4" value="1" id="framework-laravel-5-4">
-                        <label for="framework-laravel-5-4">Laravel 5.4</label>
-                        <input type="checkbox" name="framework-nette-2-4" value="1" id="framework-nette-2-4">
-                        <label for="framework-nette-2-4">Nette 2.4</label>
-                        <input type="checkbox" name="framework-other" value="1" id="framework-other">
-                        <label for="framework-other">Autres</label>
+                        <input type="checkbox" name="frameworkLaravel54" value="1" id="frameworkLaravel54">
+                        <label for="frameworkLaravel54">Laravel 5.4</label>
+                        <input type="checkbox" name="frameworkNette24" value="1" id="frameworkNette24">
+                        <label for="frameworkNette24">Nette 2.4</label>
+                        <input type="checkbox" name="frameworkOther" value="1" id="frameworkOther">
+                        <label for="frameworkOther">Other</label>
                     </div>
 
                     <div class="strawpool-question">
                         <span class="question">What would make you use Artas instead of another ORM ?</span>
                         <br>
-                        <textarea rows="3" cols="80" name="use-artas"></textarea>
+                        <textarea rows="3" cols="80" name="chooseArtas"></textarea>
                     </div>
 
                     <div class="strawpool-question">
                         <span class="question">What features of your prefered ORM do you want in Artas ?</span>
                         <br>
-                        <textarea rows="3" cols="80" name="prefered-features"></textarea>
+                        <textarea rows="3" cols="80" name="preferedFeatures"></textarea>
                     </div>
 
                     <div class="strawpool-question">
@@ -192,9 +192,29 @@
                         <textarea rows="3" cols="80" name="faults"></textarea>
                     </div>
 
-                    <input type="submit" value="Submit">
+                    <input type="submit" value="Submit" id="strawpool-submit">
                 </form>
             </div>
         </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#strawpool-form').on('submit', function(event) {
+                    event.preventDefault();
+
+                    var $form = $(this);
+                    $.post(
+                        $form.attr('action'),
+                        $form.serialize()
+                    ).done(function(response) {
+                        console.log(response.result);
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
