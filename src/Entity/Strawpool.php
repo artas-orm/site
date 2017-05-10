@@ -22,25 +22,25 @@ class Strawpool
     protected $sqlByOwn;
 
     /** @var bool */
-    protected $dbmsMysql = false;
+    protected $dbmsMysql;
 
     /** @var bool */
-    protected $dbmsOci = false;
+    protected $dbmsOci;
 
     /** @var bool */
-    protected $dbmsSqlServer = false;
+    protected $dbmsSqlServer;
 
     /** @var bool */
-    protected $dbmsPostgreSql = false;
+    protected $dbmsPostgreSql;
 
     /** @var bool */
-    protected $dbmsDb2 = false;
+    protected $dbmsDb2;
 
     /** @var bool */
-    protected $dbmsSqLite = false;
+    protected $dbmsSqLite;
 
     /** @var bool */
-    protected $dbmsOther = false;
+    protected $dbmsOther;
 
     /** @var ?int */
     protected $importancePerformance;
@@ -86,6 +86,17 @@ class Strawpool
 
     /** @var ?string */
     protected $faults;
+
+    public function __construct()
+    {
+        $this->dbmsMysql = false;
+        $this->dbmsOci = false;
+        $this->dbmsSqlServer = false;
+        $this->dbmsPostgreSql = false;
+        $this->dbmsDb2 = false;
+        $this->dbmsSqLite = false;
+        $this->dbmsOther = false;
+    }
 
     public function getId(): ?int
     {

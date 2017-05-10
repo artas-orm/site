@@ -1,220 +1,384 @@
-<html>
-    <head>
-        <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-            integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-            crossorigin="anonymous"
-        >
-        <link rel="stylesheet" type="text/css" href="artas.css">
-    </head>
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Artas - PHP ORM PROJECT</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <body>
-        <div class="row">
-            <div class="col-lg-12 header">
-                <span class="title">Artas</span>
-                <br>
-                <span class="description">PHP ORM project</span>
-            </div>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
-            <div class="col-lg-12 panel panel-why">
-                <div class="panel-title">Why Artas</div>
-                Today, we have 3 choices : Doctrine, Propel and Eloquent.
-                <br>Other ones are dead, or too much integrated in a framework to be used in your project.
-                <br>
-                We love <a href="https://github.com/doctrine/doctrine2/releases" target="_blank">Doctrine</a>, it's an awesome ORM, with a lot of features.
-                But last major version, 2.5, has been released 2 years ago.
-                <br>
-                <a href="https://github.com/propelorm/Propel2/releases" target="_blank">Propel2</a> released his first alpha 4 years ago, no final version since.
-                <br>
-                <a href="https://laravel.com/docs/5.4/eloquent">Eloquent</a> is based on ActiveRecord, who is a good pattern, but too much restrictive in our opinion.
-                <br><br>
-                <span class="artas-born">For this reasons, and because we think we can do something awesome, <strong>Artas was born</strong> !</span>
-            </div>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/venobox.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/artas.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
-            <div class="col-lg-12 panel panel-todo">
-                <div class="panel-title">What we want to do</div>
-                <div class="block block-performance">
-                    <div class="block-title">Performance</div>
-                    ORM suffers a bad reputation about performances. We want to change it !
-                    <br>
-                    See
-                    <a href="https://github.com/steevanb/doctrine-read-only-hydrator/blob/master/benchmark.png" target="_blank">Doctrine hydrators benchmark</a>
-                    for example.
+    <link rel="stylesheet" href="css/color-blue.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Add your site or application content here -->
+<div class="wrapper">
+    <div class="dark-layout">
+        <header class="header-area">
+            <div id="main-menu" class="sticker">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="logo float-left"> <a href="index.html"><img src="img/logo/logo.png" alt="logo" /></a> </div>
+                            <div class="main-menu float-right">
+                                <nav>
+                                    <ul>
+                                        <li class="active"><a href="#home">HOME</a></li>
+                                        <li><a href="#why-artas">Why Artas</a></li>
+                                        <li><a href="#what-we-want-to-do">What we want to do</a></li>
+                                        <li><a href="#strawpool">Strawpool</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 hidden-lg hidden-md">
+                            <div class="mobile-menu">
+                                <nav>
+                                    <ul>
+                                        <li class="active"><a href="#home">HOME</a></li>
+                                        <li><a href="#why-artas">Why Artas</a></li>
+                                        <li><a href="#what-we-want-to-do">What we want to do</a></li>
+                                        <li><a href="#strawpool">Strawpool</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="block block-extensibility">
-                    <div class="block-title">Extensibility</div>
-                    Artas should be extensible. Really. Not just "possible".
-                </div>
-
-                <strong>Regular versions</strong>. Symfony roadmap for example, it's clear and you know when a fix or a feature will be published.
-
-                <br>
-                <strong>Install only what you need</strong>. Sometimes you don't need earth, but a stone. You should have the choice.
             </div>
+        </header>
 
-            <div class="col-lg-12 panel panel-strawpool">
-                <div class="panel-title">Take 2 minutes for this strawpool !</div>
-                <form action="strawpool.php" method="POST" id="strawpool-form">
-                    <div class="strawpool-question">
-                        <span class="question">Are you interested in an alternative to Doctrine, Propel and Eloquent ?</span>
-                        <br>
-                        <input type="radio" name="interested" value="1" id="interested-1">
-                        <label for="interested-1">Yes</label>
-                        <input type="radio" name="interested" value="0" id="interested-2">
-                        <label for="interested-2">No</label>
+        <div id="home" class="height-100vh bg-oapcity-40 bg-overly bg-img-1 sm-height-none st-middle">
+            <div class="table">
+                <div class= "table-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="home-slider clearfix">
+                                <div class="col-md-12 col-sm-12 text-center">
+                                    <div class="top-text pt-60">
+                                        <div class="slider-text">
+                                            <h1 class="tlt1">Artas</h1>
+                                            <h2 class="tlt">PHP ORM project</h2>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel volutpat felis, eu condimentum massa. Pellentesque mollis eros<br>
+                                                vel mattis tempor. Aliquam eu efficitur enim, vitae fermentum orci. Sed et feugiat nulla. </p>
+                                            <div class="button-set"> <a class="button active" href="#"> <i class="zmdi zmdi-apple"></i> <span> Available on the <span class="large-text">App Store</span> </span> </a> <a class="button btn-mobile" href="#"> <i class="zmdi zmdi-google-play"></i> <span> Available on the <span class="large-text">Play Store</span> </span> </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">What minimal version of PHP ?</span>
-                        <br>
-                        <input type="radio" name="phpVersion" value="1" id="php-7-1">
-                        <label for="php-7-1">7.1 (since december 2016)</label>
-                        <input type="radio" name="phpVersion" value="2" id="php-7-0">
-                        <label for="php-7-0">7.0 (since decembre 2015)</label>
-                        <input type="radio" name="phpVersion" value="3" id="php-5-6">
-                        <label for="php-5-6">5.6 (since august 2014)</label>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">Is <a href="https://en.wikipedia.org/wiki/Database_abstraction_layer">DBAL</a> important for you ?</span>
-                        <br>
-                        <input type="radio" name="dbal" value="1" id="dbal-1">
-                        <label for="dbal-1">Yes</label>
-                        <input type="radio" name="dbal" value="0" id="dbal-2">
-                        <label for="dbal-2">No</label>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">
-                            Do you want to write your SQL queries,
-                            or use something who write SQL for you (like Doctrine QueryBuilder / DQL) ?
-                        </span>
-                        <br>
-                        <input type="radio" name="sqlByOwn" value="1" id="sqlByOwn-1">
-                        <label for="sqlByOwn-1">Write my SQL, to optimize it</label>
-                        <input type="radio" name="sqlByOwn" value="0" id="sqlByOwn-2">
-                        <label for="sqlByOwn-2">Write something like Doctrine QueryBuilder / DQL</label>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">What DBMS you want to use with Artas ?</span>
-                        <br>
-                        <input type="checkbox" name="dbmsMysql" value="1" id="dbmsMysql">
-                        <label for="dbmsMysql">MySQL</label>
-                        <input type="checkbox" name="dbmsOci" value="1" id="dbmsOci">
-                        <label for="dbmsOci">Oracle</label>
-                        <input type="checkbox" name="dbmsSqlServer" value="1" id="dbmsSqlServer">
-                        <label for="dbmsSqlServer">MS SQL Server</label>
-                        <input type="checkbox" name="dbmsPostgreSql" value="1" id="dbmsPostgreSql">
-                        <label for="dbmsPostgreSql">Postgre SQL</label>
-                        <input type="checkbox" name="dbmsDb2" value="1" id="dbmsDb2">
-                        <label for="dbmsDb2">DB2</label>
-                        <input type="checkbox" name="dbmsSqlite" value="1" id="dbmsSqlite">
-                        <label for="dbmsSqlite">SQLite</label>
-                        <input type="checkbox" name="dbmsOther" value="1" id="dbmsOther">
-                        <label for="dbmsOther">Other</label>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">
-                            Tell us importance level for each element, from 1 to 5
-                            (1 : very important, 5 : useless) :
-                        </span>
-                        <br>
-                        <input type="number" name="importancePerformance" id="importancePerformance">
-                        <label for="importancePerformance">Performance</label>
-                        <br>
-                        <input type="number" name="importanceReleasesFrequency" id="importanceReleasesFrequency">
-                        <label for="importanceReleasesFrequency">Releases frequency</label>
-                        <br>
-                        <input type="number" name="importanceExtensibility" id="importanceExtensibility">
-                        <label for="importanceExtensibility">Code extensibility</label>
-                        <br>
-                        <input type="number" name="importanceCommunity" id="importanceCommunity">
-                        <label for="importanceCommunity">Community</label>
-                        <br>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">Are you interest on crowdfunding, to help us ?</span>
-                        <br>
-                        <input type="radio" name="crowdfunding" value="1" id="crowdfunding-1">
-                        <label for="crowdfunding-1">Yes</label>
-                        <input type="radio" name="crowdfunding" value="0" id="crowdfunding-2">
-                        <label for="crowdfunding-2">No</label>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">What framework integration do you need ?</span>
-                        <br>
-
-                        <label>
-                            <input type="checkbox" name="frameworkSymfony2" value="1">
-                            Symfony2
-                        </label>
-                        <label>
-                            <input type="checkbox" name="frameworkSymfony3" value="1">
-                            Symfony3
-                        </label>
-                        <label>
-                            <input type="checkbox" name="frameworkZend2" value="1">
-                            Zend Framework 2
-                        </label>
-                        <label>
-                            <input type="checkbox" name="frameworkZend3" value="1">
-                            Zend Framework 3
-                        </label>
-                        <input type="checkbox" name="frameworkLaravel54" value="1" id="frameworkLaravel54">
-                        <label for="frameworkLaravel54">Laravel 5.4</label>
-                        <input type="checkbox" name="frameworkNette24" value="1" id="frameworkNette24">
-                        <label for="frameworkNette24">Nette 2.4</label>
-                        <input type="checkbox" name="frameworkOther" value="1" id="frameworkOther">
-                        <label for="frameworkOther">Other</label>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">What would make you use Artas instead of another ORM ?</span>
-                        <br>
-                        <textarea rows="3" cols="80" name="chooseArtas"></textarea>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">What features of your prefered ORM do you want in Artas ?</span>
-                        <br>
-                        <textarea rows="3" cols="80" name="preferedFeatures"></textarea>
-                    </div>
-
-                    <div class="strawpool-question">
-                        <span class="question">What faults of your prefered ORM you want to be corrected in Artas ?</span>
-                        <br>
-                        <textarea rows="3" cols="80" name="faults"></textarea>
-                    </div>
-
-                    <input type="submit" value="Submit" id="strawpool-submit">
-                </form>
+                </div>
             </div>
         </div>
 
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-        <script type="text/javascript">
-            $(function() {
-                $('#strawpool-form').on('submit', function(event) {
-                    event.preventDefault();
+        <div id="why-artas" class="all-about gray-bg bg-dark-gray">
+            <div class="pt-100 pb-100">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="feature-title title-style title-pb">
+                            <h1>Why <span>Artas</span></h1>
+                            <p class="about-pb">Today, we have 3 choices : <strong>Doctrine</strong>, <strong>Propel</strong> and <strong>Eloquent</strong>.<br />
+                                Other ones are dead, or too much integrated in a framework to be used in your project.<br />
+                                <br />
+                                We love <a href="https://github.com/doctrine/doctrine2/releases" target="_blank">Doctrine</a>, this is an awesome ORM, with a lot of features.<br />But last major version, 2.5, has been released 2 years ago.
+                                <br /><br />
+                                <a href="https://github.com/propelorm/Propel2/releases" target="_blank">Propel2</a> released his first alpha 4 years ago, no final version since.
+                                <br /><br />
+                                <a href="https://laravel.com/docs/5.4/eloquent" target="_blank">Eloquent</a> is based on ActiveRecord, who is a good pattern, but too much restrictive in our opinion.</p>
+                            <p class="sentence-big">For this reasons, and because we think we can do something awesome, <strong>Artas was born !</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    var $form = $(this);
-                    $.post(
-                        $form.attr('action'),
-                        $form.serialize()
-                    ).done(function(response) {
-                        console.log(response.result);
-                    });
-                });
-            });
-        </script>
-    </body>
+        <div id="what-we-want-to-do" class="bg-dark">
+            <div class="pt-100 pb-120">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="feature-title title-style title-pb">
+                            <h1>What we<span> want to do</span> </h1>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="single-item res-sm text-center">
+                                <div class="single-item-icon"> <i class="zmdi zmdi-trending-up"></i> </div>
+                                <h4 class="ht-pt">Performance</h4>
+                                <p>ORM suffers a bad reputation about performances. We want to change it !<br />
+                                    See <a href="https://github.com/steevanb/doctrine-read-only-hydrator/blob/master/benchmark.png" target="_blank">Doctrine hydrators benchmark</a> for example.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="single-item res-sm text-center">
+                                <div class="single-item-icon"> <i class="zmdi zmdi-swap"></i> </div>
+                                <h4 class="ht-pt">Extensibility</h4>
+                                <p>Artas should be extensible. Really. Not just "possible".</p>
+                            </div>
+                        </div>
+                        <br style="clear:both;" />
+                        <br style="clear:both;" />
+                        <div class="col-sm-6 col-md-6">
+                            <div class="single-item res-sm text-center">
+                                <div class="single-item-icon"> <i class="zmdi zmdi-calendar-check"></i> </div>
+                                <h4 class="ht-pt">Regular versions</h4>
+                                <p>Symfony roadmap for example, it's clear and you know when a fix or a feature will be published.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6">
+                            <div class="single-item res-sm text-center">
+                                <div class="single-item-icon"> <i class="zmdi zmdi-download"></i> </div>
+                                <h4 class="ht-pt">Install only what you need</h4>
+                                <p>Sometimes you don't need earth, but a stone. You should have the choice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="strawpool" class="contact-area gray-bg pt-120 bg-dark-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="title-style title-pb">
+                            <h1>Take 2 minutes for this <span>strawpool !</span></h1>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-2 col-md-8 text-center">
+                        <div class="contact-from">
+                            <form action="strawpool.php" method="POST" id="strawpool-form">
+                                <div class="strawpool-question"> <span class="white-text">Are you interested in an alternative to Doctrine, Propel and Eloquent ?</span> <br>
+                                    <label for="interested-1"><span class="white-text">Yes</span>
+                                        <input type="radio" name="interested" value="1" id="interested-1"></label>
+                                    <label for="interested-2"><span class="white-text">No</span>
+                                        <input type="radio" name="interested" value="0" id="interested-2"></label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">What minimal version of PHP ?</span> <br>
+                                    <label for="php-7-1"><span class="white-text">7.1 (since december 2016)</span>
+                                        <input type="radio" name="phpVersion" value="1" id="php-7-1"></label>
+                                    <label for="php-7-0"><span class="white-text">7.0 (since decembre 2015)</span>
+                                        <input type="radio" name="phpVersion" value="2" id="php-7-0"></label>
+                                    <label for="php-5-6"><span class="white-text">5.6 (since august 2014)</span>
+                                        <input type="radio" name="phpVersion" value="3" id="php-5-6"></label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">Is <a href="https://en.wikipedia.org/wiki/Database_abstraction_layer">DBAL</a> important for you ?</span> <br>
+                                    <label for="dbal-1"><span class="white-text">Yes</span>
+                                        <input type="radio" name="dbal" value="1" id="dbal-1"></label>
+                                    <label for="dbal-2"><span class="white-text">No</span>
+                                        <input type="radio" name="dbal" value="0" id="dbal-2"></label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text"> Do you want to write your SQL queries,
+                  or use something who write SQL for you (like Doctrine QueryBuilder / DQL) ? </span> <br>
+                                    <label for="sqlByOwn-1"><span class="white-text">Write my SQL, to optimize it</span>
+                                        <input type="radio" name="sqlByOwn" value="1" id="sqlByOwn-1"></label>
+                                    <label for="sqlByOwn-2"><span class="white-text">Write something like Doctrine QueryBuilder / DQL</span>
+                                        <input type="radio" name="sqlByOwn" value="0" id="sqlByOwn-2"></label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">What DBMS you want to use with Artas ?</span> <br>
+                                    <label for="dbmsMysql"><span class="white-text">MySQL</span>
+                                        <input type="checkbox" name="dbmsMysql" value="1" id="dbmsMysql"></label>
+                                    <label for="dbmsOci"><span class="white-text">Oracle</span>
+                                        <input type="checkbox" name="dbmsOci" value="1" id="dbmsOci"></label>
+                                    <label for="dbmsSqlServer"><span class="white-text">MS SQL Server</span>
+                                        <input type="checkbox" name="dbmsSqlServer" value="1" id="dbmsSqlServer"></label>
+                                    <label for="dbmsPostgreSql"><span class="white-text">Postgre SQL</span>
+                                        <input type="checkbox" name="dbmsPostgreSql" value="1" id="dbmsPostgreSql"></label>
+                                    <label for="dbmsDb2"><span class="white-text">DB2</span>
+                                        <input type="checkbox" name="dbmsDb2" value="1" id="dbmsDb2"></label>
+                                    <label for="dbmsSqlite"><span class="white-text">SQLite</span>
+                                        <input type="checkbox" name="dbmsSqlite" value="1" id="dbmsSqlite"></label>
+                                    <label for="dbmsOther"><span class="white-text">Other</span>
+                                        <input type="checkbox" name="dbmsOther" value="1" id="dbmsOther"></label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text"> Tell us importance level for each element, from 1 to 5
+                  (1 : very important, 5 : useless) : </span> <br>
+                                    <label for="importancePerformance"><span class="white-text">Performance</span></label>
+                                    <input type="number" name="importancePerformance" id="importancePerformance">
+                                    <br>
+                                    <label for="importanceReleasesFrequency"><span class="white-text">Releases frequency</span></label>
+                                    <input type="number" name="importanceReleasesFrequency" id="importanceReleasesFrequency">
+                                    <br>
+                                    <label for="importanceExtensibility"><span class="white-text">Code extensibility</span></label>
+                                    <input type="number" name="importanceExtensibility" id="importanceExtensibility">
+                                    <br>
+                                    <label for="importanceCommunity"><span class="white-text">Community</span></label>
+                                    <input type="number" name="importanceCommunity" id="importanceCommunity">
+                                    <br>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">Are you interest on crowdfunding, to help us ?</span> <br>
+                                    <label for="crowdfunding-1"><span class="white-text">Yes</span>
+                                        <input type="radio" name="crowdfunding" value="1" id="crowdfunding-1"></label>
+                                    <label for="crowdfunding-2"><span class="white-text">No</span>
+                                        <input type="radio" name="crowdfunding" value="0" id="crowdfunding-2"></label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">What framework integration do you need ?</span> <br>
+                                    <label><span class="white-text">Symfony2</span>
+                                        <input type="checkbox" name="frameworkSymfony2" value="1">
+                                    </label>
+                                    <label><span class="white-text">Symfony3</span>
+                                        <input type="checkbox" name="frameworkSymfony3" value="1">
+                                    </label>
+                                    <label><span class="white-text">Zend Framework 2</span>
+                                        <input type="checkbox" name="frameworkZend2" value="1">
+                                    </label>
+                                    <label><span class="white-text">Zend Framework 3</span>
+                                        <input type="checkbox" name="frameworkZend3" value="1">
+                                    </label>
+                                    <label for="frameworkLaravel54"><span class="white-text">Laravel 5.4</span>
+                                        <input type="checkbox" name="frameworkLaravel54" value="1" id="frameworkLaravel54">
+                                    </label>
+                                    <label for="frameworkNette24"><span class="white-text">Nette 2.4</span>
+                                        <input type="checkbox" name="frameworkNette24" value="1" id="frameworkNette24">
+                                    </label>
+                                    <label for="frameworkOther"><span class="white-text">Other</span>
+                                        <input type="checkbox" name="frameworkOther" value="1" id="frameworkOther">
+                                    </label>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">What would make you use Artas instead of another ORM ?</span> <br>
+                                    <textarea rows="3" cols="80" name="chooseArtas"></textarea>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">What features of your prefered ORM do you want in Artas ?</span> <br>
+                                    <textarea rows="3" cols="80" name="preferedFeatures"></textarea>
+                                </div>
+                                <br />
+                                <div class="strawpool-question"> <span class="white-text">What faults of your prefered ORM you want to be corrected in Artas ?</span> <br>
+                                    <textarea rows="3" cols="80" name="faults"></textarea>
+                                </div>
+                                <br />
+                                <input type="submit" value="Submit">
+                            </form>
+
+
+                            <form action="strawpool.php" method="POST" id="strawpool-form">
+                                <div class="form-group has-success">
+                                    <label class="form-control-label" for="inputSuccess1"><span class="text-success">Input with success</span></label>
+                                    <input type="text" class="form-control form-control-success" id="inputSuccess1">
+
+                                    <small class="form-text text-muted text-success">Success! You've done it.</small>
+                                </div><br />
+                                <div class="form-group has-warning">
+                                    <label class="form-control-label" for="inputWarning1"> <span class="text-warning">Input with warning</span></label>
+                                    <input type="text" class="form-control form-control-warning" id="inputWarning1">
+
+
+                                    <small class="form-text text-muted text-warning">Shucks, check the formatting of that and try again..</small>
+                                </div>
+                                <br />
+                                <label class="custom-control custom-checkbox">
+                                    <span class="text-danger">Check this custom checkbox</span>
+                                    <input type="checkbox" class="custom-control-input" disabled>
+                                    <span class="custom-control-indicator"></span>
+                                </label>
+
+                                <label class="custom-control custom-radio">
+                                    <span class="text-danger">Toggle this custom radio</span>
+                                    <input id="radio3" name="radioDisabled" type="radio" class="custom-control-input" disabled>
+                                    <span class="custom-control-indicator"></span>
+
+                                </label>
+                            </form>
+                            <p class="form-messege"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="conatct-info fix bg-dark">
+                        <div class="col-md-4 col-sm-4 text-center">
+                            <div class="single-contact-info">
+                                <div class="contact-icon"> <i class="zmdi zmdi-phone"></i> </div>
+                                <div class="contact-text"> <span> +012 345 678 102 <br>
+                  +012 345 678 102 </span> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 text-center">
+                            <div class="single-contact-info res-xs2">
+                                <div class="contact-icon"> <i class="zmdi zmdi-globe-alt"></i> </div>
+                                <div class="contact-text"> <span> <a href="#">tonemail@email.com </a> <br>
+                  <a href="#">tonwebsite.com</a> </span> </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 text-center">
+                            <div class="single-contact-info">
+                                <div class="contact-icon"> <i class="zmdi zmdi-pin"></i> </div>
+                                <div class="contact-text"> <span> ton adresse<br>
+                  street,Crossroad123. </span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer-area pt-120 pb-80 bg-dark">
+            <div class="container">
+                <div class="col-md-12 text-center">
+                    <div class="footer-all">
+                        <div class="footer-logo"> <a href="#"><img src="img/logo/logo.png" alt="" ></a> </div>
+                        <div class="footer-icon">
+                            <ul>
+                                <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                <li><a href="#"><i class="zmdi zmdi-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-text"> <span> Création de site web - <a href="http://www.websitin.com" target="_blank">Websitin</a> </span> </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- start scrollUp
+                    ============================================ -->
+        <div id="toTop"> <i class="fa fa-chevron-up"></i> </div>
+    </div>
+</div>
+
+<!-- jquery
+		============================================ -->
+<script src="js/vendor/jquery-1.11.3.min.js"></script>
+<!-- bootstrap JS
+		============================================ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- ajax mails JS
+        ============================================ -->
+<script src="js/ajax-mail.js"></script>
+<!-- plugins JS
+		============================================ -->
+<script src="js/plugins.js"></script>
+<!-- main JS
+		============================================ -->
+<script src="js/main.js"></script>
+</body>
 </html>

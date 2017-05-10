@@ -1,0 +1,16 @@
+body {
+    cursor: default;
+}
+
+.sentence-big {
+    color: #535353;
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 30px;
+    margin-bottom: 17px;
+    text-transform: uppercase;
+}
+
+.slider-text h1 {
+    text-transform: none;
+}
