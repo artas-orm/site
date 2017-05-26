@@ -1,16 +1,37 @@
 body {
     cursor: default;
+    font-size: 16px;
 }
 
 .sentence-big {
     color: #535353;
     font-size: 36px;
     font-weight: normal;
-    line-height: 30px;
+    line-height: 45px;
     margin-bottom: 17px;
     text-transform: uppercase;
 }
 
 .slider-text h1 {
     text-transform: none;
+}
+
+.slider-text p {
+    font-size: 24px !important;
+}
+
+.contact-from input[type=number] {
+    width: 80px;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.footer-text span {
+    text-transform: none;
+}
+
+.main-menu li a {
+    font-size: 16px;
 }
